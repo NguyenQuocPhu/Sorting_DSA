@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 long long random(int l, int r){
-    return l + 1LL * rand()*rand()*rand()%(r - l + 1);
+    return l + 1LL * rand()*rand()%(r - l + 1);
 }
 void quickSort(vector<int>&a, int l, int r){
     int p = a[random(l,r)];
