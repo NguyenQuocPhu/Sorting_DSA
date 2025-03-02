@@ -72,11 +72,11 @@ int SIZE = 1e6;
 int main() {
     srand(time(0));
     ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
-    # Lặp kiểm tra 10 test liên tiép
+    // Lặp kiểm tra 10 test liên tiép
     for(int test = 1 ; test <= 10 ; test++){
         string filename = "test_" + to_string(test) + ".txt";
         freopen(filename.c_str(), "r", stdin);
-        # Lấy dữ liệu trong file
+        // Lấy dữ liệu trong file
         auto start = std::chrono::high_resolution_clock::now();
         for (int i = 1 ; i <= SIZE; i++){
             int x; cin>>x;
@@ -86,7 +86,7 @@ int main() {
         auto end = std::chrono::high_resolution_clock::now();
         a.clear();
         std::chrono::duration<double, std::milli> elapsed = end - start;
-        # Tính thời gian chạy
+        // Tính thời gian chạy
         std::cout << "Runtime "<<test<<": "<< elapsed.count() << " ms" << std::endl;
     }
     return 0;
