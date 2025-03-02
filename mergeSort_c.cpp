@@ -74,9 +74,9 @@ int main() {
     ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
     // Lặp kiểm tra 10 test liên tiép
     for(int test = 1 ; test <= 10 ; test++){
+        // Lấy dữ liệu trong file
         string filename = "test_" + to_string(test) + ".txt";
         freopen(filename.c_str(), "r", stdin);
-        // Lấy dữ liệu trong file
         auto start = std::chrono::high_resolution_clock::now();
         for (int i = 1 ; i <= SIZE; i++){
             int x; cin>>x;
@@ -85,8 +85,8 @@ int main() {
         mergeSort(a, 0, a.size() - 1);
         auto end = std::chrono::high_resolution_clock::now();
         a.clear();
-        std::chrono::duration<double, std::milli> elapsed = end - start;
         // Tính thời gian chạy
+        std::chrono::duration<double, std::milli> elapsed = end - start;
         std::cout << "Runtime "<<test<<": "<< elapsed.count() << " ms" << std::endl;
     }
     return 0;
