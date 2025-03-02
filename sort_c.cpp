@@ -16,6 +16,7 @@ int main() {
             a.push_back(x);
         }
         sort(a.begin(), a.end());
+        // Sử dụng hàm sort có sẵn của C++
         auto end = std::chrono::high_resolution_clock::now();
         a.clear();
         std::chrono::duration<double, std::milli> elapsed = end - start;
