@@ -22,17 +22,17 @@ int main() {
         // Lấy dữ liệu trong file
         string filename = "test_" + to_string(test) + ".txt";
         freopen(filename.c_str(), "r", stdin);
-        auto start = std::chrono::high_resolution_clock::now();
+        auto start = chrono::high_resolution_clock::now();
         for (int i = 1 ; i <= SIZE; i++){
             int x; cin>>x;
             a.push_back(x);
         }
         heapSort(a);
-        auto end = std::chrono::high_resolution_clock::now();
+        auto end = chrono::high_resolution_clock::now();
         a.clear();
         // Tính thời gian chạy
-        std::chrono::duration<double, std::milli> elapsed = end - start; 
-        std::cout << "Runtime "<<test<<": "<< elapsed.count() << " ms" << std::endl;
+        chrono::duration<double, milli> elapsed = end - start; 
+        cout << "Runtime "<<test<<": "<< elapsed.count() << " ms" << endl;
     }
     return 0;
 }
