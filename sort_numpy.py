@@ -10,6 +10,7 @@ for i in range(1,10):
     # Chuyển đổi dữ liệu từ string sang int
     st = time.time()
     sorted_arr = np.sort(a)
+    # Sử dụng hàm sort của numpy
     en = time.time()
     runningtime = (en - st) * 1000
     # Tính thời gian chạy của mỗi file
